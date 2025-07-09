@@ -1,4 +1,8 @@
-// Example: layout.tsx or RootLayout
+// Example: layout.tsx or RootLayouT
+import React from "react";
+
+
+export default function Footer() {
 return (
   <html lang="en">
     <body>
@@ -7,3 +11,4 @@ return (
     </body>
   </html>
 );
+}
