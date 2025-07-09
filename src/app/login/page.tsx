@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { auth, signIn } from "../../../auth";
 import { redirect } from "next/navigation";
-import Logo from "@/components/logo";
+import Image from "next/image";
 import { GradientBackground } from "@/components/gradient";
 
 const LoginPage = async () => {
@@ -16,9 +16,16 @@ const LoginPage = async () => {
       {/* Content */}
       <div className="z-10 px-4 sm:px-6 md:px-0">
         <div className="mx-auto w-full max-w-md rounded-xl bg-white shadow-md border border-black/10 px-6 py-10 sm:px-10 sm:py-12">
-          {/* Logo */}
+          {/* ✅ Logo as Image */}
           <div className="flex justify-center mb-6">
-            <Logo className="w-auto h-10 sm:h-12" />
+            <Image
+              src="/logo.png" // ✅ Replace with your actual image path in /public
+              alt="Lakambini Logo"
+              width={120}
+              height={120}
+              className="h-auto w-auto"
+              priority
+            />
           </div>
 
           {/* Google Sign-In Button */}
