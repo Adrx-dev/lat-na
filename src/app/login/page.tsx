@@ -57,7 +57,7 @@ const LoginPage = async () => {
           {/* Divider */}
           <div className="mt-6 border-t pt-4 text-center text-sm text-gray-600">
             Not a member?{" "}
-            <Link href="/login" className="font-medium hover:text-gray-800 transition">
+            <Link href="#" className="font-medium hover:text-gray-800 transition">
               Create an account
             </Link>
           </div>
