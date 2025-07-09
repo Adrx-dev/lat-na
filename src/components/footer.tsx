@@ -10,7 +10,7 @@ export default function Footer() {
         className="relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url(/images/footer-bg.jpg)" }} // <-- replace with your image path
       >
-        {/* Optional: add overlay */}
+                {/* Optional: add overlay */}
         <div className="absolute inset-0 bg-white/80 z-0" />
 
         {/* Content */}
@@ -21,16 +21,15 @@ export default function Footer() {
                 Get started
               </p>
               <p className="mx-auto mt-6 text-3xl sm:text-5xl font-medium tracking-tight text-gray-950 max-w-3xl">
-                React to dive in? <br />
-                Start your free trial today
+                Do you want to use new features? <br />
+                Login now!
               </p>
               <p className="mx-auto mt-6 max-w-md text-sm sm:text-base text-gray-600">
-                Get the cheat codes for selling and unlock your team&apos;s
-                revenue potential.
+                Login to use more freatures.
               </p>
               <div className="mt-6">
                 <Button className="w-full sm:w-auto" href="/login">
-                  Get started
+                  Login
                 </Button>
               </div>
             </div>
