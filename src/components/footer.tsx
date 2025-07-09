@@ -14,16 +14,15 @@ export default function Footer() {
               Get started
             </p>
             <p className="mx-auto mt-6 text-3xl text-gray-950 sm:text-5xl tracking-tight font-medium">
-              React to dive in ? <br />
-              Start your free trial today
+              Are you ready to use new features? <br />
+              Login now
             </p>
             <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-              Get the cheat codes for selling and unlock your team&apos;s
-              revenue potential.
+              Try our new comment feature in this website.
             </p>
             <div className="mt-6">
               <Button className="w-full sm:w-auto" href="/login">
-                Get started
+                Login
               </Button>
             </div>
           </div>
