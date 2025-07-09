@@ -15,8 +15,8 @@ import Image from "next/image";
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/company", label: "Company" },
-  { href: "/contact", label: "Contact" },
+  { href: "https://www.facebook.com/profile.php?id=61577645173668", label: "Facebook Page" },
+  { href: "/studio", label: "Admin" },
 ];
 
 export const DesktopNav = () => {
