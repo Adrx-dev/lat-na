@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "Admin | Lakambini Archives",
   description:
     "A platform for Grade XI Lakambini students to share academic insights, experiences, and stories that inspire our community.",
-};
+        icons: {
+    icon: "/favicon.ico", // ← this is your favicon
+  },
+  };
 
 export default function RootLayout({
   children,
