@@ -19,7 +19,7 @@ const LoginPage = async () => {
           {/* ✅ Logo as Image */}
           <div className="flex justify-center mb-6">
             <Image
-              src="/logo.png" // ✅ Replace with your actual image path in /public
+              src="/bini.png" // ✅ Replace with your actual image path in /public
               alt="Lakambini Logo"
               width={120}
               height={120}
