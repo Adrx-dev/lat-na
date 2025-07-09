@@ -24,7 +24,50 @@ const LoginPage = async () => {
             <p className="mt-1 text-sm/5 text-gray-600">
               Sign in to your account to continue.
             </p>
-            
+            <Field className="mt-4 space-y-3">
+              <Label className="text-sm/5 font-medium">Email</Label>
+              <Input
+                required
+                autoFocus
+                type="email"
+                name="email"
+                className={clsx(
+                  "block w-full rounded-lg border border-transparent shadow ring-1 ring-black/10",
+                  "px-[calc(theme(spacing.2)-1px)] py-[calc(theme(spacing[1.5])-1px)] text-base/6 sm:text-sm/6",
+                  "data-[focus]:outline data-[focus]:outline-2 data-[focus]:-outline-offset-1 data-[focus]:outline-black"
+                )}
+              />
+            </Field>
+            <Field className="mt-4 space-y-3">
+              <Label className="text-sm/5 font-medium">Password</Label>
+              <Input
+                required
+                type="password"
+                name="password"
+                className={clsx(
+                  "block w-full rounded-lg border border-transparent shadow ring-1 ring-black/10",
+                  "px-[calc(theme(spacing.2)-1px)] py-[calc(theme(spacing[1.5])-1px)] text-base/6 sm:text-sm/6",
+                  "data-[focus]:outline data-[focus]:outline-2 data-[focus]:-outline-offset-1 data-[focus]:outline-black"
+                )}
+              />
+            </Field>
+            <div className="mt-4 flex items-center justify-between text-sm/5">
+              <Field className="flex items-center gap-3">
+                <Checkbox
+                  name="remember-me"
+                  className={clsx(
+                    "group block size-4 rounded border border-transparent shadow ring-1 ring-black/10 focus:outline-none",
+                    "data-[checked]:bg-black data-[checked]:ring-black",
+                    "data-[focus]:outline data-[focus]:outline-2 data-[focus]:outline-offset-2 data-[focus]:outline-black"
+                  )}
+                >
+                  <CheckIcon className="fill-white opacity-0 group-data-[checked]:opacity-100" />
+                </Checkbox>
+                <Label>Remember me</Label>
+              </Field>
+              <Link href="#" className="font-medium hover:text-gray-600">
+                Forgot password?
+              </Link>
             </div>
             <div className="mt-6">
               <Button type="submit" disabled={true} className="w-full">
