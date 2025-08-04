@@ -30,9 +30,7 @@ const SinglePostPage = async ({
         <h1 className="text-4xl font-medium tracking-tighter sm:text-6xl text-gray-950 text-pretty mt-2">
           {post?.title}
         </h1>
-
         <div className="mt-16 grid grid-cols-1 gap-8 pb-24 lg:grid-cols-[15rem_1fr] xl:grid-cols-[15rem_1fr_15rem]">
-          {/* Author + Categories */}
           <div className="flex flex-wrap items-center gap-5 max-lg:justify-between lg:flex-col lg:items-start">
             {post?.author && (
               <div className="mt-6 flex items-center gap-3">
@@ -62,8 +60,6 @@ const SinglePostPage = async ({
               </div>
             )}
           </div>
-
-          {/* Post Content */}
           <div className="flex flex-col">
             <div className="text-gray-700">
               <div className="max-w-2xl xl:mx-auto">
@@ -190,32 +186,24 @@ const SinglePostPage = async ({
                 </div>
               </div>
             </div>
-
-            {/* 💬 Comments Section */}
-            <div className="mt-10 max-w-2xl w-full px-4 sm:px-6 lg:px-8 mx-auto">
+            {/* Comments will go here */}
+            <div className="mt-10 max-w-2xl">
               <WriteComment _id={post?._id} />
               {post?.comments?.length > 0 && (
-                <div className="mt-8">
-                  <div className="w-full flex flex-col gap-4 p-6 sm:p-10 rounded-xl shadow-lg shadow-rose-600/40 bg-white dark:bg-zinc-900 max-w-2xl mx-auto transition-all duration-300">
-                    <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 dark:text-white">
-                      Comments
-                    </h3>
-                    <hr className="border-gray-300 dark:border-gray-700" />
-                    <div className="space-y-4">
-                      {post?.comments?.map((comment) => (
-                        <div
-                          key={comment?._id}
-                          className="rounded-md bg-gray-50 dark:bg-zinc-800 p-4 text-gray-700 dark:text-gray-200 shadow-sm overflow-x-auto"
-                        >
-                          <p className="break-words whitespace-pre-wrap text-sm sm:text-base leading-relaxed">
-                            <span className="text-blue-700 dark:text-blue-400 font-semibold">
-                              {comment?.name}
-                            </span>
-                            : {comment?.comment}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
+                <div className="p-5">
+                  <div className="w-full flex flex-col p-10 rounded-md max-w-2xl mx-auto shadow-rose-600 shadow space-y-2">
+                    <h3 className="text-4xl font-semibold">Comments</h3>
+                    <hr className="pb-2" />
+                    {post?.comments?.map((comment) => (
+                      <div key={comment?._id}>
+                        <p>
+                          <span className="text-blue-700 font-semibold">
+                            {comment?.name}
+                          </span>
+                          : {comment?.comment}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
@@ -223,8 +211,6 @@ const SinglePostPage = async ({
           </div>
         </div>
       </Container>
-
-      {/* 📰 Other Posts */}
       <OtherPosts otherPosts={otherPosts} />
     </div>
   );
