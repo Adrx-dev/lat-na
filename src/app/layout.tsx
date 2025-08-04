@@ -4,7 +4,7 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
-  title: "Home | Lakambini Archives",
+  title: "Admin | Lakambini Archives",
   description:
     "A platform for Grade XI Lakambini students to share academic insights, experiences, and stories that inspire our community.",
         icons: {
